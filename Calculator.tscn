@@ -1,0 +1,164 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://TypeButton.gd" type="Script" id=1]
+[ext_resource path="res://Calculator.gd" type="Script" id=2]
+[ext_resource path="res://Labels/labels.tres" type="Theme" id=3]
+
+[node name="Calculator" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Selectors" type="VBoxContainer" parent="."]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 105.0
+margin_bottom = 80.0
+
+[node name="Label" type="Label" parent="Selectors"]
+margin_right = 105.0
+margin_bottom = 14.0
+text = "Defender Type 1"
+
+[node name="TypeButton1" type="OptionButton" parent="Selectors"]
+margin_top = 18.0
+margin_right = 105.0
+margin_bottom = 38.0
+script = ExtResource( 1 )
+
+[node name="Label2" type="Label" parent="Selectors"]
+margin_top = 42.0
+margin_right = 105.0
+margin_bottom = 56.0
+text = "Defender Type 2"
+
+[node name="TypeButton2" type="OptionButton" parent="Selectors"]
+margin_top = 60.0
+margin_right = 105.0
+margin_bottom = 80.0
+script = ExtResource( 1 )
+
+[node name="TypeListingBox" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -421.0
+margin_top = -300.0
+margin_right = -130.0
+margin_bottom = 300.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource( 3 )
+custom_constants/separation = 30
+alignment = 1
+
+[node name="QuarterEffective" type="VBoxContainer" parent="TypeListingBox"]
+margin_top = 195.0
+margin_right = 291.0
+margin_bottom = 213.0
+theme = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="TypeListingBox/QuarterEffective"]
+margin_right = 291.0
+margin_bottom = 14.0
+theme = ExtResource( 3 )
+text = "1/4 Damage"
+
+[node name="Types" type="HFlowContainer" parent="TypeListingBox/QuarterEffective"]
+margin_top = 18.0
+margin_right = 291.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
+theme = ExtResource( 3 )
+
+[node name="HalfEffective" type="VBoxContainer" parent="TypeListingBox"]
+margin_top = 243.0
+margin_right = 291.0
+margin_bottom = 261.0
+theme = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="TypeListingBox/HalfEffective"]
+margin_right = 291.0
+margin_bottom = 14.0
+theme = ExtResource( 3 )
+text = "1/2 Damage"
+
+[node name="Types" type="HFlowContainer" parent="TypeListingBox/HalfEffective"]
+margin_top = 18.0
+margin_right = 291.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
+theme = ExtResource( 3 )
+
+[node name="NeutrallyEffective" type="VBoxContainer" parent="TypeListingBox"]
+margin_top = 291.0
+margin_right = 291.0
+margin_bottom = 309.0
+theme = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="TypeListingBox/NeutrallyEffective"]
+margin_right = 291.0
+margin_bottom = 14.0
+theme = ExtResource( 3 )
+text = "Neutral Damage"
+
+[node name="Types" type="HFlowContainer" parent="TypeListingBox/NeutrallyEffective"]
+margin_top = 18.0
+margin_right = 291.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
+theme = ExtResource( 3 )
+
+[node name="DoubleEffective" type="VBoxContainer" parent="TypeListingBox"]
+margin_top = 339.0
+margin_right = 291.0
+margin_bottom = 357.0
+theme = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="TypeListingBox/DoubleEffective"]
+margin_right = 291.0
+margin_bottom = 14.0
+theme = ExtResource( 3 )
+text = "2x Damage"
+
+[node name="Types" type="HFlowContainer" parent="TypeListingBox/DoubleEffective"]
+margin_top = 18.0
+margin_right = 291.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
+theme = ExtResource( 3 )
+
+[node name="QuadrupleEffective" type="VBoxContainer" parent="TypeListingBox"]
+margin_top = 387.0
+margin_right = 291.0
+margin_bottom = 405.0
+theme = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="TypeListingBox/QuadrupleEffective"]
+margin_right = 291.0
+margin_bottom = 14.0
+theme = ExtResource( 3 )
+text = "4x Damage"
+
+[node name="Types" type="HFlowContainer" parent="TypeListingBox/QuadrupleEffective"]
+margin_top = 18.0
+margin_right = 291.0
+margin_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
+theme = ExtResource( 3 )
+
+[connection signal="item_selected" from="Selectors/TypeButton1" to="." method="_on_TypeButton1_item_selected"]
+[connection signal="item_selected" from="Selectors/TypeButton2" to="." method="_on_TypeButton2_item_selected"]

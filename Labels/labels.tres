@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=2]
+
+[resource]
+HFlowContainer/constants/hseparation = 64
+HFlowContainer/constants/vseparation = 20
+VBoxContainer/constants/separation = 4
