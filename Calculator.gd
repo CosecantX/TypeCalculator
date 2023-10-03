@@ -63,7 +63,8 @@ func run_program():
 func clear_boxes():
 	for box in boxes:
 		for child in boxes[box].get_children():
-			child.free()
+			child.visible = false
+			child.queue_free()
 		boxes[box].get_parent().visible = true
 
 func calculate():
@@ -88,7 +89,11 @@ func display_matchups():
 
 func hide_unused_boxes():
 	for box in boxes:
-		if boxes[box].get_child_count() == 0:
+		var box_empty = true
+		for child in boxes[box].get_children():
+			if child.visible:
+				box_empty = false
+		if box_empty:
 			boxes[box].get_parent().visible = false
 
 func _on_TypeButton1_item_selected(index):
