@@ -8,5 +8,5 @@
 color = Color( 0.898039, 0.764706, 0.941176, 1 )
 
 [node name="Label" parent="ColorRect" index="0"]
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Textile"

@@ -1,16 +1,23 @@
-[gd_scene format=2]
+[gd_scene format=3 uid="uid://dbqgkecuxasn6"]
 
 [node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 60.0
-margin_bottom = 16.0
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 24.0
+color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="ColorRect"]
-margin_top = 2.0
-margin_right = 60.0
-margin_bottom = 16.0
-align = 1
-valign = 1
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 23.0
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1

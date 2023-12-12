@@ -1,7 +1,7 @@
 class_name AttackData
 extends Node
 
-const types = preload("res://Types.gd")
+const types = preload("res://Types.gd").types
 
 var attack_type: int = types.NONE
 var attack_power: int = 0

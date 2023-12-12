@@ -1,0 +1,10 @@
+res://default_env.tres
+res://Calculator.tscn
+res://AttackData.gd
+res://Matchups.gd
+res://Labels/MindLabel.tscn
+res://Calculator.gd
+res://Types.gd
+res://Labels/labels.tres
+res://Labels/BaseLabel.tscn
+res://Labels/LightLabel.tscn

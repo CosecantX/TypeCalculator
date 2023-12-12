@@ -1,6 +1,6 @@
-[gd_resource type="Theme" format=2]
+[gd_resource type="Theme" format=3 uid="uid://d1efli44s6kl3"]
 
 [resource]
-HFlowContainer/constants/hseparation = 64
-HFlowContainer/constants/vseparation = 20
+HFlowContainer/constants/h_separation = 78
+HFlowContainer/constants/v_separation = 32
 VBoxContainer/constants/separation = 4

@@ -12,5 +12,5 @@ enum types {
 	POLYMER,
 	LIGHT,
 	DARK,
-	SPIRIT
+	MIND
 }
